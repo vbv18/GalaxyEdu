@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Galactic.io</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 160;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(Hero.png);
+        }
+
+        .page {
+            background: url(Hero.png);
+            background-size: cover;
+        }
+
+        .sun {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0;
+            padding-bottom: 9%;
+        }
+
+        .sun-img {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sun-img img {
+            width: 100%;
+            position: relative;
+            top: -45;
+        }
+
+        .sun-container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5%;
+            width: 56%;
+        }
+
+        .sun-txt1 {
+            font-size: xxx-large;
+            letter-spacing: .05em;
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: row;
+            margin: 3px;
+            padding: 9px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 42%;
+            height: 172px;
+            margin: 3px;
+            padding: 3px;
+            background: linear-gradient(-45deg, rgba(103, 0, 103, 0.911), rgb(28, 28, 28));
+            border-image: linear-gradient(rgba(103, 0, 103, 0.911), rgb(28, 28, 28)) 45;
+            border-width: 6px;
+            border-style: solid;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box-img {
+            display: inline-block;
+            margin-left: 0.5%;
+        }
+
+        .box-txt {
+            display: inline-block;
+            width: 64%;
+            height: 132px;
+            font-size: xx-large;
+            margin-left: 26px;
+        }
+
+        .box-txt span {
+            font-size: medium;
+        }
+
+        .mercury {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 6%;
+            padding-bottom: 8%;
+        }
+
+        .mercury-img img {
+            width: 100%;
+            transform: scale(3);
+            margin-left: 30%;
+        }
+
+        .mercury-container {
+            display: inline-block;
+            padding: 4px;
+            width: 56%;
+        }
+
+        .venus {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 9%;
+            padding-bottom: 5%;
+        }
+
+        .venus-container {
+            display: inline-block;
+            margin: 4px;
+            padding: 7px;
+            width: 56%;
+        }
+
+        .venus-container .boxes {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .venus img {
+            align-items: center;
+        }
+
+        .venus-img img {
+            width: 100%;
+            transform: scale(3.4);
+            margin-left: 34%;
+        }
+
+        .earth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: max-content;
+            padding-top: 8%;
+            padding-bottom: 11%;
+        }
+
+        .earth-container1 {
+            display: flex;
+            flex-direction: row;
+            margin: 4px;
+            padding: 4px;
+            justify-content: space-evenly;
+        }
+
+        .earth-container2 {
+            display: flex;
+            flex-direction: column;
+            width: 46%;
+            margin: 4px;
+            padding: 7px;
+            justify-content: center;
+        }
+
+        .earth-img {
+            justify-content: center;
+        }
+
+        .earth-img img {
+            width: 100%;
+            transform: scale(3);
+            margin-left: 35%;
+        }
+
+        .moon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 74%;
+        }
+
+        .moon-container {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin: 4px;
+            padding: 7px;
+            justify-content: center;
+            align-items: end;
+            text-align: right;
+        }
+
+        .moon-txt1 {
+            font-size: xx-large;
+        }
+
+        .mars {
+            display: flex;
+            flex-direction: row;
+            padding-top: 6%;
+            padding-bottom: 10%;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .mars-container1 {
+            display: flex;
+            flex-direction: column;
+            width: 64%;
+        }
+
+        .mars-container2 {
+            display: flex;
+            flex-direction: column;
+            margin: 3%;
+            padding: 3%;
+            width: 72%;
+        }
+
+        .mars-boxes {
+            display: flex;
+            flex-direction: column;
+            margin: 3px;
+            padding: 9px;
+            align-items: center;
+        }
+
+        .mars-box {
+            width: 56%;
+            height: 164px;
+            margin: 3px;
+            padding: 3px;
+            background: linear-gradient(-45deg, rgba(87, 1, 87, 0.911), rgb(28, 28, 28));
+            border-image: linear-gradient(rgba(87, 1, 87, 0.911), rgb(28, 28, 28)) 45;
+            border-width: 6px;
+            border-style: solid;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .martian {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            height: 70%;
+        }
+
+        .martian-container {
+            width: 50%;
+            align-content: end;
+        }
+
+        .mars-img {
+            width: 100%;
+            height: 100%;
+            align-content: end;
+        }
+
+        .mars-img img {
+            width: 100%;
+            transform: scale(3);
+            margin-left: 30%;
+        }
+
+        .jupiter {
+            display: flex;
+            flex-direction: row;
+            border: 2px solid white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jupiter-container1 {
+            border: 2px solid white;
+            justify-items: center;
+            width: 80%;
+        }
+
+        .jupiter-container2 {
+            border: 2px solid white;
+            margin: 2%;
+            padding: 2%;
+        }
+
+        .jupiter-boxes {
+            width: 60%;
+            border: 2px solid white;
+        }
+
+        .jupiter-img {
+            width: 100%;
+            height: 100%;
+            align-items: end;
+            align-content: end;
+            justify-items: right;
+            justify-content: right;
+
+        }
+
+        .jupiter-img img {
+            position: relative;
+            right: 0;
+            transform: scale(4);
+            width: 100%;
+            align-items: end;
+            align-content: end;
+            justify-items: right;
+            justify-content: right;
+            align-self: right;
+        }
+
+        .saturn {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .saturn-img {
+            width: 50%;
+        }
+
+        .saturn-container1 {
+            display: flex;
+            flex-direction: column;
+            padding: 0.5%;
+        }
+
+        .saturn-container2 {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            margin: 2.5%;
+            padding: 2.5%;
+        }
+
+        .saturn .boxes {
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .saturn .box {
+            margin: 2%;
+        }
+
+        .uranus {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            padding-top: 4%;
+        }
+
+        .uranus-container1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .uranus-container2 {
+            display: flex;
+            flex-direction: column;
+            margin: 2.5%;
+            padding: 2.5%;
+            width: 36%;
+        }
+
+        .uranus .boxes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .uranus-img {
+            justify-content: center;
+        }
+
+        .uranus-img img {
+            width: 95%;
+            margin-left: 5%;
+        }
+
+        .neptune {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 4%;
+        }
+
+        .neptune-container1 {
+            display: flex;
+            flex-direction: column;
+            width: 76%;
+            margin: 1%;
+            padding: 1%;
+            align-items: center;
+        }
+
+        .neptune-container2 {
+            margin: 2%;
+            padding: 2%;
+        }
+
+        .neptune .boxes {
+            width: 70%;
+            justify-content: space-between;
+        }
+
+        .neptune-img img {
+            width: 100%;
+        }
+
+        footer {
+            background-color: rgb(35, 35, 35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .foot-1 {
+            width: 50%;
+            padding: 2%;
+        }
+
+        .foot-txt1 {
+            font-size: xx-large;
+            letter-spacing: .05em;
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .foot-txt2 {
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .subscribe {
+            padding: 3px;
+        }
+
+        .subscribe input {
+            width: 30%;
+            height: 36px;
+            border-radius: 20px;
+        }
+
+        .foot-2 {
+            margin: 2%;
+            padding: 2%;
+        }
+
+        .back-box {
+            width: 44px;
+            height: 34px;
+            padding: 6px;
+            position: fixed;
+            right: 18px;
+            bottom: 20px;
+            border-radius: 60px;
+            align-content: center;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #555;
+        }
+
+        .back-box:hover {
+            background-color: black;
+            transition: 0.7s;
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SUN -->
+
+    <div class="sun page">
+        <div class="sun-img">
+            <img src="sunn.png" alt="">
+        </div>
+        <div class="sun-container">
+            <div class="sun-txt1 orbitron">
+                <b>.SUN</b>
+            </div>
+            <div class="sun-txt2 inter">
+                <p>The Sun is a huge, glowing ball of hot plasma at the centre of our solar system and provides the
+                    vital
+                    energy needed for life on Earth. This energy radiates outward in the form of light and heat,
+                    providing
+                    warmth and light to the entire solar system.</p>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span>870,000 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 7%;">
+                        <img src="thermo.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Temperature </span>±5,500° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MERCURY -->
+
+    <div class="mercury page">
+        <div class="mercury-img">
+            <img src="mercury.png" alt="" style="width: 30%;">
+        </div>
+
+        <div class="mercury-container">
+            <div class="sun-txt1 orbitron">
+                <b>1.MERCURY</b>
+            </div>
+            <div class="sun-txt2 inter">
+                <p>Mercury is the closest planet to the Sun and is known for its extreme temperatures and barren, rocky
+                    surface. It is one of the four terrestrial planets in our solar system, characterized by their
+                    solid, rocky composition.</p>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span>3,032 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermo.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Day-Time Temp. </span>±430° Celcius
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermoCool.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Night-Time Temp. </span>-180° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Venus -->
+
+    <div class="venus page">
+        <div class="venus-container">
+            <div class="sun-txt1 orbitron">
+                <b>2.VENUS</b>
+            </div>
+            <div class="sun-txt2 inter">
+                <p>Venus is often referred to as Earth's "sister planet" due to its similar size and composition, but it
+                    stands out with its extremely inhospitable environment.</p>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span><br>7,521 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermo.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Temperature </span>±475° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="venus-img">
+            <img src="venus.png" alt="" style="width: 30%;">
+        </div>
+    </div>
+
+    <!-- EARTH -->
+
+    <div class="earth page">
+        <div class="earth-container1">
+            <div class="earth-container2">
+                <div class="sun-txt1 orbitron">
+                    <b>3.EARTH</b>
+                </div>
+                <div class="sun-txt2 inter">
+                    <p>Earth is the third planet from the Sun and the only known planet to support life. Earth is the
+                        only planet known to harbor life. It's a diverse and dynamic world with a wide range of
+                        ecosystems, climates, and geological features.</p>
+                </div>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box" style="width: 84%;">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span><br>7,918 Miles
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="moon">
+            <div class="moon-container">
+                <div class="moon-txt1 orbitron">
+                    <b>Moon Planet</b>
+                </div>
+                <div class="moon-txt2 inter">
+                    <p>Earth has one natural satellite, the Moon, which plays a role in stabilizing the planet's
+                        rotation and tides. The Moon's gravitational pull causes ocean tides to rise and fall.</p>
+                </div>
+            </div>
+            <div class="moon-img">
+                <img src="moonArrow.png" alt="">
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="earth-img">
+            <img src="Earth.png" alt="" style="width: 30%;">
+        </div>
+    </div>
+
+    <!-- MARS -->
+
+    <div class="mars page">
+        <div class="mars-container1">
+            <div class="mars-container2">
+                <div class="sun-txt1 orbitron">
+                    <b>4.MARS</b>
+                </div>
+                <div class="sun-txt2 inter">
+                    <p>Mars, often referred to as the "Red Planet," is the fourth planet from the Sun and has captivated
+                        human imagination for centuries with its reddish appearance and potential for hosting life.</p>
+                </div>
+            </div>
+
+            <div class="martian">
+                <div class="mars-img">
+                    <img src="mars.png" alt="" style="width: 30%;">
+                </div>
+                <div class="martian-container">
+                    <div class="martian-txt1 orbitron" style="font-size: xx-large;">
+                        <b>Martian Moons</b>
+                    </div>
+                    <br>
+                    <div class="martian-txt2 inter">
+                        <p>Mars has two small moons, Phobos and Deimos, which are irregularly shaped and thought to be
+                            captured asteroids.</p>
+                    </div>
+                </div>
+                <div class="martian-img">
+                    <img src="martianArrow.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="mars-boxes orbitron">
+            <br>
+            <div class="mars-box">
+                <div class="box-img">
+                    <img src="donut_large.png" alt="">
+                </div>
+                <div class="box-txt">
+                    <span>Diameter </span>4,212 Miles
+                </div>
+            </div>
+            <br>
+            <div class="mars-box">
+                <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                    <img src="thermo.png" alt="">
+                </div>
+                <div class="box-txt" style="margin-left: 40px;">
+                    <span>Day-Time Temp. </span>±20° Celcius
+                </div>
+            </div>
+            <br>
+            <div class="mars-box">
+                <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                    <img src="thermoCool.png" alt="">
+                </div>
+                <div class="box-txt" style="margin-left: 40px;">
+                    <span>Night-Time Temp. </span>-73° Celcius
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <div class="saturn page">
+        <div class="saturn-img">
+            <img src="saturn.png" alt="">
+        </div>
+        <div class="saturn-container1">
+            <div class="saturn-container2">
+                <div class="sun-txt1 orbitron">
+                    <b>6.SATURN</b>
+                </div>
+                <div class="sun-txt2 inter">
+                    <p>Saturn, often referred to as the "Ringed Planet," is known for its stunning system of rings that
+                        encircle the planet's equator. It's the sixth planet from the Sun and is one of the most
+                        visually distinctive objects in our solar system, with more than 80 known satellites.</p>
+                </div>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span><br>74,898 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermoCool.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Temperature </span>-139° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="uranus page">
+        <div class="uranus-container1">
+            <div class="uranus-container2">
+                <div class="sun-txt1 orbitron">
+                    <b>7.URANUS</b>
+                </div>
+                <div class="sun-txt2 inter">
+                    <p>Uranus, often referred to as the "Ice Giant," is a unique and mysterious planet in our solar
+                        system. It stands out due to its distinct blue-green color and its unusual rotation axis.</p>
+                </div>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span><br>31,518 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermoCool.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Temperature </span>-224° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uranus-img">
+            <img src="uranus.png" alt="">
+        </div>
+    </div>
+
+    <div class="neptune page">
+        <div class="neptune-container1">
+            <div class="neptune-container2">
+                <div class="sun-txt1 orbitron">
+                    <b>8.NEPTUNE</b>
+                </div>
+                <div class="sun-txt2 inter">
+                    <p>Neptune, often called the "Blue Giant," is the eighth and farthest planet from the Sun in our
+                        solar system. It is a gas giant known for its striking blue color and turbulent atmosphere.</p>
+                </div>
+            </div>
+            <div class="boxes orbitron">
+                <div class="box">
+                    <div class="box-img">
+                        <img src="donut_large.png" alt="">
+                    </div>
+                    <div class="box-txt">
+                        <span>Diameter </span><br>30,775 Miles
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-img" style="transform: scale(1.3); margin-left: 32px;">
+                        <img src="thermoCool.png" alt="">
+                    </div>
+                    <div class="box-txt" style="margin-left: 40px;">
+                        <span>Temperature </span>-218° Celcius
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="neptune-img">
+            <img src="neptune.png" alt="">
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-1">
+            <div class="foot-txt1 orbitron">
+                Join the Education Academy.
+            </div>
+            <div class="foot-txt2 inter">
+                Join the Education Community today and be part of a movement that's transforming minds and shaping
+                tomorrows.
+            </div>
+            <div class="subscribe">
+                <input type="email" name="subscribe" id="" placeholder="  Enter Your Email">
+            </div>
+        </div>
+        <div class="foot-2">
+            <img src="logo.png" alt="logo" style="padding-right: 2px;">
+            <img src="font.png" alt="logo">
+        </div>
+    </footer>
+
+    <div class="back-box inter">
+        <a href="index.html" target="_blank"><b>↩</b></a>
+    </div>
+
+</body>
+
+</html>

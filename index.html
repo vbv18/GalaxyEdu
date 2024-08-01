@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Galactic.io</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        .orbitron {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .inter {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 160;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url(Hero1.png);
+            background-size: cover;
+        }
+
+
+        header {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header div {
+            display: inline-block;
+            margin: 7px;
+            padding: 4px;
+            margin-left: 6%;
+        }
+
+        nav {
+            font-family: Arial;
+            margin-right: 3%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            background: none;
+        }
+
+        nav ul li {
+            padding: 0 14px;
+            font-size: 1.2rem;
+            background: none;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .text1 {
+            position: absolute;
+            transform: translate(22%, -218%);
+            width: 988px;
+            font-size: xxx-large;
+        }
+
+        .text2 {
+            width: 972px;
+            position: absolute;
+            top: 66%;
+            left: 17%;
+        }
+
+        .button {
+            position: absolute;
+            top: 74%;
+            left: 45%;
+            border-radius: 16px;
+            padding: 16px 28px;
+            font-size: 20px;
+            cursor: pointer;
+            background: linear-gradient(135deg, rgb(28, 28, 254), rgb(144, 1, 1));
+        }
+
+        .button:hover {
+            transition: 0.5s;
+            text-align: center;
+            letter-spacing: 0.07em;
+            transform: scale(1.05);
+        }
+
+        .un {
+            letter-spacing: 0.02em;
+            position: relative;
+        }
+
+        .un:after {
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            background: white;
+            transition: width 0.4s ease 0s, left 0.4s ease 0s;
+            width: 0;
+        }
+
+        .un:hover:after {
+            width: 70%;
+            left: 15%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div style="cursor: pointer;">
+            <img src="logo.png" alt="logo" style="padding-right: 2px;">
+            <img src="font.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="inter">
+                <li class="un"><a href="main.html" target="_self">SUN</a></li>
+                <li class="un"><a href="main.html" target="_self">Mercury</a></li>
+                <li class="un"><a href="main.html" target="_self">Venus</a></li>
+                <li class="un"><a href="main.html" target="_self">Earth</a></li>
+                <li class="un"><a href="main.html" target="_self">Mars</a></li>
+                <li class="un"><a href="main.html" target="_self">Jupiter</a></li>
+                <li class="un"><a href="main.html" target="_self">Saturn</a></li>
+                <li class="un"><a href="main.html" target="_self">Uranus</a></li>
+                <li class="un"><a href="main.html" target="_self">Neptune</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="1st.png" alt="" style="width: 100%; height: 100%;">
+
+        <div class="text1 orbitron">
+            <h1>Let's Get To Know Our Solar System Galaxy</h1>
+        </div>
+        <div class="text2 inter">
+            <h4>Embark on a cosmic journey across the ethereal expanse of the solar system Galaxy and follow the
+                orchestration of the cosmos and the planets weaving stories of their timeless</h4>
+        </div>
+        <div class="button inter">
+            <a href="main.html"><span>Click Here</span> ➤</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
